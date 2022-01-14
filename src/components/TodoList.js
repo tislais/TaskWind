@@ -21,7 +21,7 @@ export default function TodoList({
                     className="hidden"
                     onChange={() => handleClick(todo)}
                   />
-                  {todo.task}
+                  <span className="truncate">{todo.task}</span>
                 </label>
                 <button
                   className={button}
@@ -44,6 +44,7 @@ export default function TodoList({
 const svg1 = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    style={{ minWidth: "2rem" }}
     className="h-8 w-8 text-green-500"
     viewBox="0 0 20 20"
     fill="currentColor"
@@ -92,6 +93,8 @@ const label = `
   text-lg 
   text-zinc-400
   hover:text-white
+  truncate
+  cursor-pointer
 `;
 
 const button = `
@@ -104,7 +107,7 @@ const button = `
 
 const deleteAll = `
   px-4
-  text-red-700 
-  hover:text-red-600
+  text-pink-600/75
+  hover:underline
   mx-auto
 `;

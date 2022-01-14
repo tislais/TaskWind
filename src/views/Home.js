@@ -50,7 +50,7 @@ export default function Home() {
   };
 
   return (
-    <div className="p-12 max-w-screen-md mx-auto">
+    <div className={wrap}>
       <TodoForm
         newTask={newTask}
         setNewTask={setNewTask}
@@ -65,3 +65,9 @@ export default function Home() {
     </div>
   );
 }
+
+const wrap = `
+  p-12 
+  max-w-screen-md 
+  mx-auto
+`;
